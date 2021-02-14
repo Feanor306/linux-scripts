@@ -29,5 +29,9 @@ ILoveCandy
 ## mirror list
 vim|nano /etc/pacman.d/mirrorlist
 
+## INSTALL AUR PACKAGE
+clone git repo
+makepkg -si
+
 ## File system usage
 df -h

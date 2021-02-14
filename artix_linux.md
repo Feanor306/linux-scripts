@@ -109,3 +109,10 @@ grub-mkconfig -o /boot/grub/grub.cfg
 
 ## Set system password
 passwd
+
+## Get LARBS
+reboot and login as root 
+https://larbs.xyz
+
+curl -LO larbs.xyz/larbs.sh
+sh larbs.sh 

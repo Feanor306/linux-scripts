@@ -54,3 +54,9 @@ sudo systemctl enable lightdm.service
 ## user startup and settings
 ~/.profile
 ~/.bash_profile
+
+## Refresh BASH
+source ~/.bashrc
+
+## Notes
+cherrytree vnotes zim
