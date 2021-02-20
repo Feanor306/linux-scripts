@@ -54,3 +54,6 @@ sudo systemctl enable lightdm.service
 ## user startup and settings
 ~/.profile
 ~/.bash_profile
+
+## generate terminal color scheme from walpaper
+wal -i .config/wall.png
