@@ -18,9 +18,13 @@ if exists -> UEFI
 
 ## Check partitions
 lsblk -> check partitions
+  
+**NOTE**  
+**the rest of this guide we will use "sdc" partition**  
+**change it to sd{a|b|c} according to your needs**  
 
 ## Format partitions
-fdisk /dev/sdc -> format partition a|b|c  
+fdisk /dev/sdc -> format partition sd{a|b|c}  
 d {partition_id} -> delete partition_id  
 p -> list partitions  
 
