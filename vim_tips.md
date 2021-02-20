@@ -35,13 +35,13 @@ O = Start new paragraph before current one and enter insert mode
 
 ## Command mode
 :   = Enter command mode (from normal mode)  
-w   = Write file  
-q   = Quit file  
-!   = Force command (like :wq!)  
-x   = Write + quit = :wq  
-sort = sort all lines in file alphabetically  
-earlier 5m = GO BACK TO STATE OF FILE 5MIN AGO  
-later 10m = GO FORWARD IN TIME 10M (state of file)  
+:w   = Write file  
+:q   = Quit file  
+:!   = Force command (like :wq!)  
+:x   = Write + quit = :wq  
+:sort = sort all lines in file alphabetically  
+:earlier 5m = GO BACK TO STATE OF FILE 5MIN AGO  
+:later 10m = GO FORWARD IN TIME 10M (state of file)  
 
 ## Delete
 x   = Delete single character  
