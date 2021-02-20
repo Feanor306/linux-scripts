@@ -57,3 +57,9 @@ sudo systemctl enable lightdm.service
 
 ## generate terminal color scheme from walpaper
 wal -i .config/wall.png
+
+## Refresh BASH
+source ~/.bashrc
+
+## Notes
+cherrytree vnotes zim
