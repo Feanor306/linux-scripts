@@ -19,7 +19,7 @@ lsblk -> check partitions
 
 ## Make sure internet connection is up
 ping 8.8.8.8
-**wifi-menu on laptop**
+**iwctl on laptop**
 
 **NOTE**  
 **the rest of this guide we will use "sdc" partition**  
@@ -59,7 +59,7 @@ mount /dev/sdc1 /mnt/boot
 mount /dev/sdc3 /mnt/home  
 
 ## Install Arch & Linux
-pacstrap /mnt base base-devel linux linux-firmware vim
+pacstrap /mnt base base-devel linux linux-firmware vim nano
 
 ## Set mounting at boot in file
 genfstab -U /mnt >> /mnt/etc/fstab  
@@ -85,17 +85,18 @@ vim|nano /etc/hosts
 
 ## Install Grub
 pacman -S grub 
+**UEFI**
+pacman -S efibootmgr dosfstools os-prober mtools
 
 **Classic Boot**  
 grub-install --target=i386-pc /dev/sdc  
 **UEFI**  
-grub-install --target=x86_64-efi --efi-directory=esp --bootloader-id=GRUB  
+mkdir /boot/EFI
+mount /dev/sda1 /boot/EFI
+grub-install --target=x86_64-efi --efi-directory=/boot/EFI --bootloader-id=grub_uefi --recheck 
 
 **Generate grub config**  
-grub-mkconfig -o /boot/grub/grub.cfg  
-
-## Set system password
-passwd  
+grub-mkconfig -o /boot/grub/grub.cfg   
 
 ## Set system clock & Locale
 **use double TAB path completion**  
@@ -111,3 +112,16 @@ locale-gen
 **set system locale**  
 vim|nano /etc/locale.conf  
 LANG=en_US.UTF-8 
+
+## Set system password
+passwd 
+
+## Create user and give permissions
+useradd -m {username}
+passwd {username}
+usermod -aG wheel,audio,video,optical,storage {username}
+
+pacman -S sudo 
+EDITOR=nano visudo
+**uncomment line** 
+%wheel ALL=(ALL) ALL
