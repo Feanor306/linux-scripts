@@ -1,0 +1,97 @@
+# MANDATORY
+linux
+linux-firmware
+
+# FILESYSTEM
+dosfstools
+# add others if needed
+
+# BOOTLOADER
+grub
+
+# Extras
+nano
+vim
+dhcpcd
+
+### ARCHDI
+# Console generic
+nano
+vim
+pacman-contrib
+base-devel
+bash-completion
+usbutils
+lsof
+dmidecode
+dialog
+linux-firmware
+nmon
+neofetch
+powertop
+gpm
+
+# Compression Tools -> ALL
+
+# Network Tools
+rsync
+traceroute
+bind-tools
+# add others if needed
+
+# System -> Services
+networkmanager
+openssh
+cronie
+xdg-user-dirs
+numlockon
+haveged
+samba
+# Bluetooth
+bluez
+bluez-libs
+# Enable all services, disable dhcpcd if networkmanager selected
+
+# System -> File System
+os-prober
+dosfstools
+ntfs-3g
+btrfs-progs
+exfat-usbutils
+gptfdisk
+fuse2
+fuse3
+fuseiso
+sshfs
+cifs-usbutils
+smbclient
+# add others if needed
+
+# System -> Sound -> select all (except equalizer?)
+
+# System -> Print -> Defaults
+
+# System -> XOrg
+# XOrg -> Install -> Select all
+# XOrg -> Fonts -> Select all (except font-bh-ttf)
+# XOrg -> Fonts -> Select some
+# XOrg -> Input Drivers -> Default  
+# XOrg -> Video Drivers -> Check GPU Info and install drivers accordingly
+
+# Desktop Environment -> Plasma 5
+# Plasma Packages -> All
+# KDE Applications -> Selective
+# Install full later with
+pacman -S kde-desktop
+# Complements -> All?
+
+# Applications
+# Office?
+# Internet -> Web Browser -> Firefox
+# Internet -> Torrent -> Qbittorrent
+# Multimedia -> GStreamer -> Defaults
+# Multimedia -> Video Player -> Celluloid 
+# Dev -> Code
+
+# Config -> Create user and add to sudoers
+

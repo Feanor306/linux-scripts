@@ -49,6 +49,7 @@ mkfs.ext4 /dev/sdc1
 **Must use FAT for UEFI boot systems**  
 mkfs.FAT -F32 /dev/sdc1  
 **if you have swap as /dev/sdc2**
+mkswap /dev/sdb2
 swapon /dev/sdb2
 
 ## Set mountpoints for partitions
